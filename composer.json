@@ -1,0 +1,23 @@
+{
+    "name": "mvs/worksena-mvc",
+    "description": "Mvc WorkSena MicroFramework",
+    "license": "MIT",
+    "type": "library",
+    "version": "v1.0.0-alfa",
+    "authors": [
+        {
+          "name": "Walderlan Sena",
+          "email": "walderlan@worksena.xyz",
+          "homepage": "https://www.worksena.xyz",
+          "role": "Developer"
+        }
+    ],
+    "required": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+      "psr-4": {
+          "MVS\\WorksenaMvc\\": "src/"
+      }
+    }
+}

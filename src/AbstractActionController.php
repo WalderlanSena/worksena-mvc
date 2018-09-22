@@ -18,6 +18,8 @@ abstract class AbstractActionController
 
     protected function render($view, $layout = true, $data)
     {
+        extract($data);
+
         $this->action = $view;
 
         if ($layout == true && file_exists(__DIR__ . '/../../../../templates/ws-default/layout.php')) {
@@ -29,6 +31,7 @@ abstract class AbstractActionController
 
     private function content($data)
     {
+        extract($data);
         $current = get_class($this);
         $moduleName = explode('\\', $current);
         $actionLocation = str_replace('.', '/', $this->action);

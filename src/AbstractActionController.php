@@ -16,7 +16,13 @@ abstract class AbstractActionController
     protected $pageTitle;
     protected $pageDescription;
 
-    protected function render($view, $layout = true, $data)
+    /**
+     * @param $view
+     * @param array $data
+     * @param bool $layout
+     * @return mixed
+     */
+    protected function render($view, $data = [], $layout = true)
     {
         extract($data);
 
@@ -29,6 +35,10 @@ abstract class AbstractActionController
         return $this->content($data);
     }
 
+    /**
+     * @param $data
+     * @return mixed
+     */
     private function content($data)
     {
         extract($data);
